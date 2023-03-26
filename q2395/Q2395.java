@@ -1,23 +1,35 @@
 package q2395;
 
+import java.util.HashSet;
+
 public class Q2395 {
     public boolean solution(int[] nums) {
-        if (nums == null || nums.length < 3) {
-            return false;
-        }
-        final var subArraySum = new int[nums.length-1];
-        for (int i = 0; i < nums.length-1; ++i) {
-            subArraySum[i] = nums[i] + nums[i+1];
-        }
-        qsort(subArraySum, 0, subArraySum.length-1);
-
-        for (int i = 0; i < subArraySum.length-1; ++i) {
-            if (subArraySum[i] == subArraySum[i+1]) {
+        final var length = nums.length;
+        final var res = new HashSet<Integer>();
+        for (int i = 0; i < length-1; ++i) {
+            int sum = nums[i] + nums[i+1];
+            if (!res.add(sum)) {
                 return true;
             }
         }
 
         return false;
+//        if (nums == null || nums.length < 3) {
+//            return false;
+//        }
+//        final var subArraySum = new int[nums.length-1];
+//        for (int i = 0; i < nums.length-1; ++i) {
+//            subArraySum[i] = nums[i] + nums[i+1];
+//        }
+//        qsort(subArraySum, 0, subArraySum.length-1);
+//
+//        for (int i = 0; i < subArraySum.length-1; ++i) {
+//            if (subArraySum[i] == subArraySum[i+1]) {
+//                return true;
+//            }
+//        }
+//
+//        return false;
     }
 
     private void qsort(int[] num, int start, int end){
