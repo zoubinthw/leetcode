@@ -5,7 +5,7 @@ public class Q1053 {
         int leftUp = getLeftUpFirst(arr);
         if (leftUp < 0) return arr;
         int rightMaxLt = getRightMaxLt(arr, leftUp);
-        if (rightMaxLt == arr.length) return arr;
+        if (rightMaxLt < 0) return arr;
         swap(arr, leftUp, rightMaxLt);
         return arr;
     }
@@ -17,13 +17,21 @@ public class Q1053 {
     }
 
     private int getRightMaxLt(int[] arr, int leftUp) {
-        int j = arr.length - 1;
+        int j = arr.length-1;
         while (j > leftUp) {
             if (arr[j] < arr[leftUp]) {
                 break;
             }
             --j;
         }
+        if (j == leftUp + 1) return j;
+        while (j > leftUp + 1) {
+            if (arr[j] != arr[j-1]) {
+                break;
+            }
+            --j;
+        }
+
         return j;
     }
 
