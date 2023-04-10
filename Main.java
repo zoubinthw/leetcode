@@ -1,11 +1,14 @@
-import q1017.Q1017;
-import q2399.Q2399;
+import list.ListNode;
+import q1019.Q1019;
 
 public class Main {
     public static void main(String[] args) {
-        final var q2399 = new Q2399();
-        String s = "abaccb";
-        int[] distance = {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-        System.out.println(q2399.checkDistances(s, distance));
+        final var q1019 = new Q1019();
+        int[] arr = {2, 7, 4, 3, 5};
+        ListNode head = q1019.createList(arr);
+        final var answer = q1019.nextLargerNodes(head);
+        for (int ans : answer) {
+            System.out.println(ans);
+        }
     }
 }
