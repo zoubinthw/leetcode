@@ -1,10 +1,8 @@
-import list.ListNode;
-import q1019.Q1019;
+import q2404.Q2404;
 
 public class Main {
     public static void main(String[] args) {
-        String a = "abcd";
-        String b = a.substring(1, 1);
-        System.out.println(b);
+        final var q2404 = new Q2404();
+        System.out.println(q2404.mostFrequentEven(new int[]{1, 2, 3}));
     }
 }
