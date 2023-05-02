@@ -1,12 +1,14 @@
-import q1033.Q1033;
+import q970.Q970;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Q1033 q1033 = new Q1033();
-        int a = 3, b = 5, c = 1;
-        int[] res = q1033.numMovesStones(a, b, c);
-        for (int re : res) {
-            System.out.printf("%d ", re);
+        Q970 q970 = new Q970();
+        int x = 3, y = 5, bound = 15;
+        List<Integer> result = q970.powerfulIntegers(x, y, bound);
+        for (Integer item : result) {
+            System.out.printf("%d ", item);
         }
         System.out.println();
     }
