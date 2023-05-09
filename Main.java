@@ -1,10 +1,10 @@
 import q1003.Q1003;
+import q2437.Q2437;
 
 public class Main {
     public static void main(String[] args) {
-        Q1003 q1003 = new Q1003();
-        String s = "abbacabcc";
-        boolean valid = q1003.isValid(s);
-        System.out.println(valid);
+        Q2437 q2437 = new Q2437();
+        String time = "?4:22";
+        System.out.println(q2437.countTime(time));
     }
 }
