@@ -1,10 +1,10 @@
-import q1016.Q1016;
+import q1072.Q1072;
 
 public class Main {
     public static void main(String[] args) {
-        Q1016 q1016 = new Q1016();
-        String s = "0110";
-        int n = 3;
-        System.out.println(q1016.queryString(s, n));
+        Q1072 q1072 = new Q1072();
+        int[][] matrix = {{0,0,0}, {0,0,1}, {1,1,0}};
+        int result = q1072.maxEqualRowsAfterFlips(matrix);
+        System.out.println(result);
     }
 }
