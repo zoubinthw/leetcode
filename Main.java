@@ -1,10 +1,11 @@
-import q1072.Q1072;
+import q2446.Q2446;
 
 public class Main {
     public static void main(String[] args) {
-        Q1072 q1072 = new Q1072();
-        int[][] matrix = {{0,0,0}, {0,0,1}, {1,1,0}};
-        int result = q1072.maxEqualRowsAfterFlips(matrix);
-        System.out.println(result);
+        Q2446 q2446 = new Q2446();
+        String[] event1 = {"01:15","02:00"};
+        String[] event2 = {"03:00","03:20"};
+        System.out.println(q2446.haveConflict(event1, event2));
+
     }
 }
