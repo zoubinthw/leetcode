@@ -1,11 +1,14 @@
-import q2446.Q2446;
+import q1073.Q1073;
 
 public class Main {
     public static void main(String[] args) {
-        Q2446 q2446 = new Q2446();
-        String[] event1 = {"01:15","02:00"};
-        String[] event2 = {"03:00","03:20"};
-        System.out.println(q2446.haveConflict(event1, event2));
-
+        Q1073 q1073 = new Q1073();
+        int[] arr1 = {0};
+        int[] arr2 = {1};
+        int[] ans = q1073.addNegabinary(arr1, arr2);
+        for (int i = 0; i < ans.length-1; ++i) {
+            System.out.print(ans[i] + " ");
+        }
+        System.out.println(ans[ans.length-1]);
     }
 }
