@@ -1,22 +1,11 @@
-import q2559.Q2559;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import q2611.Q2611;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {9,5,7,8,7,9,8,2,0,7};
-        int len = nums.length;
-        Arrays.sort(nums);
-        Set<Double> st = new HashSet<>();
-        int i = 0, j = len-1;
-        while(i < j) {
-            double n = (nums[i] + nums[j]) * 1.0 / 2;
-            st.add(n);
-            ++i;
-            --j;
-        }
-        System.out.println(st.size());
+        int[] rw1 = {1,4,2,1,1};
+        int[] rw2 = {5,6,1,2,5};
+        int k = 3;
+        Q2611 q2611 = new Q2611();
+        System.out.println(q2611.miceAndCheese(rw1, rw2, k));
     }
 }
