@@ -1,15 +1,9 @@
-import q1170.Q1170;
+import q1375.Q1375;
 
 public class Main {
     public static void main(String[] args) {
-        Q1170 q1170 = new Q1170();
-        String[] quires = {"bbb", "cc"};
-        String[] words = {"a","aa","aaa","aaaa"};
-        int[] res = q1170.numSmallerByFrequency(quires, words);
-        for (int re : res) {
-            System.out.print(re + " ");
-        }
-
-        System.out.println();
+        Q1375 q1375 = new Q1375();
+        int[] flips = {4,1,2,3};
+        System.out.println(q1375.numTimesAllBlue(flips));
     }
 }
