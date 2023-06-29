@@ -1,17 +1,13 @@
-import q1177.Q1177;
+import q1253.Q1253;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Q1177 q1177 = new Q1177();
-        String s = "abcda";
-        int[][] quires = {{3,3,0},{1,2,0},{0,3,1},{0,3,2},{0,4,1}};
-        List<Boolean> res = q1177.canMakePaliQueries(s, quires);
-        for (Boolean re : res) {
-            System.out.print(re + " ");
-        }
-
-        System.out.println();
+        Q1253 q1253 = new Q1253();
+        int up = 4, low = 7;
+        int[] col = {2, 1, 2, 2, 1, 1, 1};
+        List<List<Integer>> lists = q1253.reconstructMatrix(up, low, col);
+        System.out.println(lists);
     }
 }
