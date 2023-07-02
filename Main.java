@@ -1,13 +1,30 @@
-import q1253.Q1253;
-
-import java.util.List;
+import list.ListNode;
+import q0002.Q0002;
 
 public class Main {
     public static void main(String[] args) {
-        Q1253 q1253 = new Q1253();
-        int up = 4, low = 7;
-        int[] col = {2, 1, 2, 2, 1, 1, 1};
-        List<List<Integer>> lists = q1253.reconstructMatrix(up, low, col);
-        System.out.println(lists);
+        Q0002 q0002 = new Q0002();
+        int[] l1 = {9, 9, 9, 9, 9, 9, 9};
+        int[] l2 = {9, 9, 9, 9};
+        ListNode h1 = makeList(l1);
+        ListNode h2 = makeList(l2);
+
+        ListNode res = q0002.addTwoNumbers(h1, h2);
+        System.out.println(res);
+    }
+
+    private static ListNode makeList(int[] arr) {
+        ListNode h = null, p = null;
+        for (int a : arr) {
+            if (h == null) {
+                h = new ListNode(a);
+                p = h;
+            } else {
+                p.next = new ListNode(a);
+                p = p.next;
+            }
+        }
+
+        return h;
     }
 }
