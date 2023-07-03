@@ -1,30 +1,15 @@
 import list.ListNode;
-import q0002.Q0002;
+import q0445.Q0445;
 
 public class Main {
     public static void main(String[] args) {
-        Q0002 q0002 = new Q0002();
-        int[] l1 = {9, 9, 9, 9, 9, 9, 9};
-        int[] l2 = {9, 9, 9, 9};
-        ListNode h1 = makeList(l1);
-        ListNode h2 = makeList(l2);
+        Q0445 q0445 = new Q0445();
+        int[] l1 = {7, 2, 4, 3};
+        int[] l2 = {5, 6, 4};
+        ListNode h1 = ListNode.makeList(l1);
+        ListNode h2 = ListNode.makeList(l2);
+        ListNode res = q0445.addTwoNumbers(h1, h2);
 
-        ListNode res = q0002.addTwoNumbers(h1, h2);
         System.out.println(res);
-    }
-
-    private static ListNode makeList(int[] arr) {
-        ListNode h = null, p = null;
-        for (int a : arr) {
-            if (h == null) {
-                h = new ListNode(a);
-                p = h;
-            } else {
-                p.next = new ListNode(a);
-                p = p.next;
-            }
-        }
-
-        return h;
     }
 }

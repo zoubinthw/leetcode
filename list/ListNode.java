@@ -31,4 +31,19 @@ public class ListNode {
     public void setNext(ListNode next) {
         this.next = next;
     }
+
+    public static ListNode makeList(int[] arr) {
+        ListNode h = null, p = null;
+        for (int a : arr) {
+            if (h == null) {
+                h = new ListNode(a);
+                p = h;
+            } else {
+                p.next = new ListNode(a);
+                p = p.next;
+            }
+        }
+
+        return h;
+    }
 }
