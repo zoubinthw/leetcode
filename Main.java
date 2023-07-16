@@ -1,10 +1,13 @@
-import q0931.Q0931;
+import q0018.Q0018;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Q0931 q0931 = new Q0931();
-        int[][] matrix = {{2,1,3}, {6,5,4}, {7,8,9}};
-//        int[][] matrix = {{-19, 57}, {-40, -5}};
-        System.out.println(q0931.minFallingPathSum(matrix));
+        Q0018 q0018 = new Q0018();
+        int target = 1000000000;
+        int[] nums = {0,0,0,1000000000,1000000000,1000000000,1000000000};
+        List<List<Integer>> lists = q0018.fourSum(nums, target);
+        System.out.println(lists);
     }
 }
