@@ -1,13 +1,11 @@
-import q0018.Q0018;
-
-import java.util.List;
+import q0874.Q0874;
 
 public class Main {
     public static void main(String[] args) {
-        Q0018 q0018 = new Q0018();
-        int target = 1000000000;
-        int[] nums = {0,0,0,1000000000,1000000000,1000000000,1000000000};
-        List<List<Integer>> lists = q0018.fourSum(nums, target);
-        System.out.println(lists);
+        Q0874 q0874 = new Q0874();
+        int[] commands = {4,-1,4,-2,4};
+        int[][] obstacles = {{2, 4}};
+        int res = q0874.robotSim(commands, obstacles);
+        System.out.println(res);
     }
 }
