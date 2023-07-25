@@ -1,11 +1,10 @@
-import q0874.Q0874;
+import q2208.Q2208;
 
 public class Main {
     public static void main(String[] args) {
-        Q0874 q0874 = new Q0874();
-        int[] commands = {4,-1,4,-2,4};
-        int[][] obstacles = {{2, 4}};
-        int res = q0874.robotSim(commands, obstacles);
+        Q2208 q2208 = new Q2208();
+        int[] nums = {3,8,20};
+        int res = q2208.halveArray(nums);
         System.out.println(res);
     }
 }
