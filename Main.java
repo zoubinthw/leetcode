@@ -1,15 +1,10 @@
-import list.ListNode;
-import q0143.Q0143;
+import q1289.Q1289;
 
 public class Main {
     public static void main(String[] args) {
-        int[] head = {1, 2, 3, 4, 5};
-        ListNode listHead = ListNode.makeList(head);
-        Q0143 q0143 = new Q0143();
-        q0143.reorderList(listHead);
-        while (listHead != null) {
-            System.out.println(listHead.val);
-            listHead = listHead.next;
-        }
+        Q1289 q1289 = new Q1289();
+        int[][] grid = {{7}};
+//        int[][] grid = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        System.out.println(q1289.minFallingPathSum(grid));
     }
 }
