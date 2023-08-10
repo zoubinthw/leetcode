@@ -1,10 +1,15 @@
-import q2208.Q2208;
+import list.ListNode;
+import q0143.Q0143;
 
 public class Main {
     public static void main(String[] args) {
-        Q2208 q2208 = new Q2208();
-        int[] nums = {3,8,20};
-        int res = q2208.halveArray(nums);
-        System.out.println(res);
+        int[] head = {1, 2, 3, 4, 5};
+        ListNode listHead = ListNode.makeList(head);
+        Q0143 q0143 = new Q0143();
+        q0143.reorderList(listHead);
+        while (listHead != null) {
+            System.out.println(listHead.val);
+            listHead = listHead.next;
+        }
     }
 }
